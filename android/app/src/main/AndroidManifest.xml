@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="muslimate_mobile_app"
+        android:label="Muslimate"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
