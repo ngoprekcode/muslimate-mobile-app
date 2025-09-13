@@ -1,4 +1,5 @@
 name: domain_common
+resolution: workspace
 description: "domain_common layer"
 version: 0.0.1
 publish_to: 'none'

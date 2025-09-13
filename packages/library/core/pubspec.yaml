@@ -1,4 +1,5 @@
 name: core
+resolution: workspace
 description: "core functional"
 version: 0.0.1
 publish_to: 'none'

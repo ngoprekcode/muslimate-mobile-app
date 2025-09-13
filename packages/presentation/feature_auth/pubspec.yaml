@@ -1,4 +1,5 @@
 name: feature_auth
+resolution: workspace
 description: "feature_auth layer"
 version: 0.0.1
 publish_to: 'none'
