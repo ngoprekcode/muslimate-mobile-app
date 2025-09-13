@@ -15,6 +15,7 @@ workspace:
   # Register presentation layer
   - packages/presentation/feature_common
   - packages/presentation/feature_auth
+  - packages/presentation/feature_dashboard
   # Register shared library
   - packages/library/core
   - packages/library/uikit
