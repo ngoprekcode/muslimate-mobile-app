@@ -6,6 +6,7 @@ version: 1.0.0+1
 environment:
   sdk: ^3.9.0
 workspace:
+  # Register for melos needs
   # Register data layer
   - packages/data/data_common
   - packages/data/data_auth
@@ -24,6 +25,26 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  # Register data layer as a package
+  data_common:
+    path: packages/data/data_common
+  data_auth:
+    path: packages/data/data_auth
+  # Register domain layer as a package
+  domain_common:
+    path: packages/domain/domain_common
+  domain_auth:
+    path: packages/domain/domain_auth
+  # Register presentation layer as a package
+  feature_common:
+    path: packages/presentation/feature_common
+  feature_auth:
+    path: packages/presentation/feature_auth
+  # Register shared library as a package
+  core:
+    path: packages/library/core
+  uikit:
+    path: packages/library/uikit
 
 dev_dependencies:
   flutter_test:
