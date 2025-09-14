@@ -1,4 +1,4 @@
-package com.ngoprekcode.muslimate.muslimate_mobile_app
+package com.ngoprekcode.muslimate.muslimate
 
 import io.flutter.embedding.android.FlutterActivity
 
