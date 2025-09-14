@@ -1,9 +1,7 @@
-import 'package:feature_auth/page/splash_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'dart:ui' as ui;
 
-import 'package:uikit/l10n/app_localizations.dart'; // untuk ambil bahasa sistem
+import 'package:uikit/uikit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -88,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _showLanguageAlert(String lang) {
-    final loc = AppLocalizations.of(context)!;
+    final loc = AppLocalizations.of(context);
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -115,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final loc = AppLocalizations.of(context)!;
+    final loc = AppLocalizations.of(context);
 
     return Scaffold(
       appBar: AppBar(
