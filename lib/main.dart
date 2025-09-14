@@ -1,8 +1,9 @@
 import 'package:feature_auth/page/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'dart:ui' as ui; // untuk ambil bahasa sistem
-import 'l10n/app_localizations.dart';
+import 'dart:ui' as ui;
+
+import 'package:uikit/l10n/app_localizations.dart'; // untuk ambil bahasa sistem
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp> {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: SplashPage(),
+      home: MyHomePage(onLocaleChange: setLocale),
     );
   }
 }
