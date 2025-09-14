@@ -1,0 +1,21 @@
+{
+  "@@locale": "en",
+  "appTitle": "Flutter Demo",
+  "homeTitle": "Flutter Demo Home Page",
+  "counterText": "You have pushed the button this many times:",
+  "increment": "Increment",
+  "languageMismatchTitle": "Language Mismatch",
+  "languageMismatchMessage": "System language is {system}, but you selected {selected}. Do you want to continue?",
+  "@languageMismatchMessage": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      },
+      "selected": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Cancel",
+  "ok": "OK"
+}

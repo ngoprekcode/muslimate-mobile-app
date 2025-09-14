@@ -1,0 +1,21 @@
+{
+  "@@locale": "id",
+  "appTitle": "Demo Flutter",
+  "homeTitle": "Halaman Utama Demo Flutter",
+  "counterText": "Tombol ini sudah ditekan sebanyak:",
+  "increment": "Tambah",
+  "languageMismatchTitle": "Bahasa Berbeda",
+  "languageMismatchMessage": "Bahasa sistem adalah {system}, tetapi kamu memilih {selected}. Lanjutkan?",
+  "@languageMismatchMessage": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      },
+      "selected": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Batal",
+  "ok": "OK"
+}
