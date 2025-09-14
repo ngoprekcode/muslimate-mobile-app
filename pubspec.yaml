@@ -57,6 +57,10 @@ dev_dependencies:
 
 melos:
   useRootAsPackage: true
+  scripts:
+    locale:
+      run: cd packages/library/uikit && flutter gen-l10n
+      description: Running flutter gen-l10n in uikit package.
 
 flutter:
   uses-material-design: true
