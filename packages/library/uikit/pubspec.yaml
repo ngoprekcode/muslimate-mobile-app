@@ -18,9 +18,44 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: 2.7.1
   flutter_lints: ^5.0.0
+  flutter_gen_runner: ^5.11.0
+
+flutter_gen:
+  output: lib/generated/
+  integrations:
+    flutter_svg: true
+  assets:
+    enabled: false
+  fonts:
+    enabled: true
+    outputs:
+      class_name: AppFonts
 
 flutter:
   generate: true
   assets:
     - assets/l10n/
+    - assets/icons/
+    - assets/images/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Poppins-Black.ttf
+          weight: 900

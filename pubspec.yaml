@@ -61,6 +61,9 @@ melos:
     locale:
       run: cd packages/library/uikit && flutter gen-l10n
       description: Running flutter gen-l10n in uikit package.
+    assets:
+      run: cd packages/library/uikit && dart run build_runner build
+      description: Running flutter_gen in uikit package.
 
 flutter:
   uses-material-design: true
