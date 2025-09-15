@@ -9,15 +9,15 @@ targets:
       json_serializable:
         generate_for:
           include:
-            - lib/src/model/**
+            - lib/model/**
       retrofit_generator:
         generate_for:
           include:
-            - lib/src/data_source/**.dart
+            - lib/data_source/**.dart
       injectable_generator:injectable_builder:
         generate_for:
           include:
-            - lib/src/data_source/**.dart
-            - lib/src/repository/**
-            - lib/src/mapper/**
-            - lib/src/di/di.dart
+            - lib/data_source/**.dart
+            - lib/repository/**
+            - lib/mapper/**
+            - lib/di/di.dart
