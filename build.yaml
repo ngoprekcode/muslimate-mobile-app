@@ -4,5 +4,4 @@ targets:
       freezed:
         generate_for:
           include:
-            - lib/failure/**
-            - lib/src/local/**
+            - lib/injector.dart

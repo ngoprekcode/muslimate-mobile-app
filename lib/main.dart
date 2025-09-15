@@ -4,7 +4,11 @@ import 'dart:ui' as ui;
 
 import 'package:uikit/uikit.dart';
 
-void main() {
+import 'injector.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies();
   runApp(const MyApp());
 }
 
