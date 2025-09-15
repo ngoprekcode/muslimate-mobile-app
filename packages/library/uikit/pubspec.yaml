@@ -27,7 +27,10 @@ flutter_gen:
   integrations:
     flutter_svg: true
   assets:
-    enabled: false
+    enabled: true
+    outputs:
+      package_parameter_enabled: true
+      class_name: AppAssets
   fonts:
     enabled: true
     outputs:

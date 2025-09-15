@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  uikit:
+    path: ../../library/uikit
 
 dev_dependencies:
   flutter_test:

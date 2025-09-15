@@ -1,3 +1,4 @@
+import 'package:feature_auth/page/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
@@ -26,19 +27,16 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Muslimate',
       locale: _locale,
-      supportedLocales: const [
-        Locale('id'),
-        Locale('en'),
-      ],
+      supportedLocales: const [Locale('id'), Locale('en')],
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: MyHomePage(onLocaleChange: setLocale),
+      home: SplashPage(),
     );
   }
 }
@@ -92,10 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context) => AlertDialog(
         title: Text(loc.languageMismatchTitle),
         content: Text(
-          loc.languageMismatchMessage(
-            system: systemLanguage,
-            selected: lang,
-          ),
+          loc.languageMismatchMessage(system: systemLanguage, selected: lang),
         ),
         actions: [
           TextButton(
