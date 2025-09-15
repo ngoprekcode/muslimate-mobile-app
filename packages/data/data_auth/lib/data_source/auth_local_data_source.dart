@@ -2,7 +2,7 @@ import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class AuthLocalDataSource {
-  Future<void> setHasSeenOnboarding();
+  Future<bool> setHasSeenOnboarding();
   Future<bool> getHasSeenOnboarding();
 }
 
@@ -19,7 +19,7 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   }
 
   @override
-  Future<void> setHasSeenOnboarding() async {
-    await sharedPreferences.setBool(_keyHasSeenOnboarding, true);
+  Future<bool> setHasSeenOnboarding() async {
+    return await sharedPreferences.setBool(_keyHasSeenOnboarding, true);
   }
 }

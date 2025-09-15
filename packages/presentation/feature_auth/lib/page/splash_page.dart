@@ -7,6 +7,8 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /// TODO [Ilham] - Adjust UI size & another UI needs.
+      /// Binding this Page with BLOC & connect with UseCase in domain_auth
       body: Center(child: AppAssets.images.imgMuslimateLogo.image()),
     );
   }
