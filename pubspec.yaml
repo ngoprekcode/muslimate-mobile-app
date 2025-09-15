@@ -16,7 +16,7 @@ workspace:
   # Register presentation layer
   - packages/presentation/feature_common
   - packages/presentation/feature_auth
-  - packages/presentation/feature_dashboard
+  - packages/presentation/feature_home
   # Register shared library
   - packages/library/core
   - packages/library/uikit
@@ -24,10 +24,6 @@ workspace:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
   # Register data layer as a package
   data_common:
     path: packages/data/data_common
@@ -43,17 +39,28 @@ dependencies:
     path: packages/presentation/feature_common
   feature_auth:
     path: packages/presentation/feature_auth
+  feature_home:
+    path: packages/presentation/feature_home
   # Register shared library as a package
   core:
     path: packages/library/core
   uikit:
     path: packages/library/uikit
 
+  # Another library (third party)
+  cupertino_icons: ^1.0.8
+  injectable: ^2.5.1
+  get_it: ^8.2.0
+  go_router: ^16.2.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
   melos: ^7.1.1
+  build_runner: 2.7.1
+  freezed: ^3.2.3
+  injectable_generator: ^2.8.1
 
 melos:
   useRootAsPackage: true
@@ -61,6 +68,14 @@ melos:
     locale:
       run: cd packages/library/uikit && flutter gen-l10n
       description: Running flutter gen-l10n in uikit package.
+    assets:
+      run: cd packages/library/uikit && dart run build_runner build
+      description: Running flutter_gen in uikit package.
+    build:
+      run: melos exec "dart run build_runner build -d"
+      description: Generate runner based on selected module
+      packageFilters:
+        flutter: true
 
 flutter:
   uses-material-design: true

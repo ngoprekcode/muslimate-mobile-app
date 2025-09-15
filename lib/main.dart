@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:muslimate_mobile_app/routes.dart';
 import 'dart:ui' as ui;
 
 import 'package:uikit/uikit.dart';
 
-void main() {
+import 'injector.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies();
   runApp(const MyApp());
 }
 
@@ -25,20 +30,17 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return MaterialApp.router(
+      title: 'Muslimate',
       locale: _locale,
-      supportedLocales: const [
-        Locale('id'),
-        Locale('en'),
-      ],
+      routerConfig: router,
+      supportedLocales: const [Locale('id'), Locale('en')],
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: MyHomePage(onLocaleChange: setLocale),
     );
   }
 }
@@ -92,10 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (context) => AlertDialog(
         title: Text(loc.languageMismatchTitle),
         content: Text(
-          loc.languageMismatchMessage(
-            system: systemLanguage,
-            selected: lang,
-          ),
+          loc.languageMismatchMessage(system: systemLanguage, selected: lang),
         ),
         actions: [
           TextButton(

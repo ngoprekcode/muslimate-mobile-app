@@ -5,3 +5,8 @@ targets:
         generate_for:
           include:
             - lib/failure/**
+      injectable_generator:injectable_builder:
+        generate_for:
+          include:
+            - lib/local/**
+            - lib/di/di.dart
