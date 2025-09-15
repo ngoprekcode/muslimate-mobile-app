@@ -1,0 +1,13 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        generate_for:
+          include:
+            - lib/bloc/**
+      injectable_generator:injectable_builder:
+        generate_for:
+          include:
+            - lib/bloc/**
+            - lib/page/**
+            - lib/di/di.dart
