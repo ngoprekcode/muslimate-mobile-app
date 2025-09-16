@@ -38,6 +38,7 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true,
         textTheme: typographyTheme,
         brightness: Brightness.light,
+        colorScheme: lightColorScheme,
       ),
       supportedLocales: const [Locale('id'), Locale('en')],
       localizationsDelegates: const [
