@@ -34,6 +34,12 @@ class _MyAppState extends State<MyApp> {
       title: 'Muslimate',
       locale: _locale,
       routerConfig: router,
+      theme: ThemeData(
+        useMaterial3: true,
+        textTheme: typographyTheme,
+        brightness: Brightness.light,
+        colorScheme: lightColorScheme,
+      ),
       supportedLocales: const [Locale('id'), Locale('en')],
       localizationsDelegates: const [
         AppLocalizations.delegate,
