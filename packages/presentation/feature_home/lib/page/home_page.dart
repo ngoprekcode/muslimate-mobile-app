@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uikit/theme/theme_extension.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,7 +8,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Home Page', style: Theme.of(context).textTheme.bodyLarge),
+        child: Text(
+          'Home Page',
+          style: context.textTheme.bodyLarge?.copyWith(
+            color: context.colorScheme.primary,
+          ),
+        ),
       ),
     );
   }
