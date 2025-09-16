@@ -34,13 +34,13 @@ flutter_gen:
   fonts:
     enabled: true
     outputs:
+      package_parameter_enabled: true
       class_name: AppFonts
 
 flutter:
   generate: true
   assets:
     - assets/l10n/
-    - assets/icons/
     - assets/images/
   fonts:
     - family: Poppins

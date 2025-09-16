@@ -11,6 +11,8 @@
 class AppFonts {
   AppFonts._();
 
+  static const String package = 'uikit';
+
   /// Font family: Poppins
-  static const String poppins = 'Poppins';
+  static const String poppins = 'packages/$package/Poppins';
 }
