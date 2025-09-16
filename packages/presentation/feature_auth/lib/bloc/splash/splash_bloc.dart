@@ -14,5 +14,9 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     on<_InitEvent>(_initEvent);
   }
 
-  Future<void> _initEvent(_InitEvent event, Emitter<SplashState> emit) async {}
+  Future<void> _initEvent(_InitEvent event, Emitter<SplashState> emit) async {
+    await Future.delayed(Duration(seconds: 2));
+    final isSeen = await getSeenOnboardingUseCase.call();
+    emit(SplashState.done(hasSeenOnboarding: isSeen));
+  }
 }

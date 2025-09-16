@@ -11,7 +11,7 @@ final featureAuthRoutes = [
     path: '/',
     name: 'splash',
     builder: (context, state) => BlocProvider(
-      create: (_) => getIt<SplashBloc>(),
+      create: (_) => getIt<SplashBloc>()..add(SplashEvent.init()),
       child: const SplashPage(),
     ),
   ),
