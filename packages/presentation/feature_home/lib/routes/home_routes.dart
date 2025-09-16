@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 
 final featureHomeRoutes = [
   GoRoute(
-    path: '/',
+    path: '/home',
     name: 'home',
     builder: (context, state) {
       return BlocProvider(
