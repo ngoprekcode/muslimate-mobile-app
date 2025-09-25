@@ -20,7 +20,7 @@ class SplashPage extends StatelessWidget {
             if (state.hasSeenOnboarding) {
               context.replaceNamed('home');
             } else {
-              context.replaceNamed('home');
+              context.replaceNamed('onboarding');
             }
           }
         },
