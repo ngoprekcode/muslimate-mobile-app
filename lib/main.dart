@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:muslimate_mobile_app/routes.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'dart:ui' as ui;
 
 import 'package:uikit/uikit.dart';
-
 import 'injector.dart';
 
 // simpan globalContext di luar agar bisa diakses via extension
@@ -12,6 +13,7 @@ late BuildContext globalContext;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
