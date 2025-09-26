@@ -17,5 +17,23 @@
     }
   },
   "cancel": "Batal",
-  "ok": "OK"
+
+  "featureAuth": {
+    "title": {
+      "onboardingQuran": "Baca Al-Qur’an",
+      "onboardingPrayer": "Jadwal Sholat",
+      "onboardingQibla": "Arah Kiblat"
+    },
+    "text": {
+      "onboardingQuranDesc": "Dapatkan akses ke Al-Qur’an lengkap dengan terjemahan dan tafsir untuk menemani perjalanan spiritual Anda.",
+      "onboardingPrayerDesc": "Jangan lewatkan shalat Anda! Dapatkan notifikasi pengingat dan jadwal shalat akurat sesuai lokasi Anda.",
+      "onboardingQiblaDesc": "Temukan arah kiblat dengan akurat di mana pun Anda berada, sehingga Anda bisa melaksanakan shalat dengan tenang."
+    },
+    "button": {
+      "ok": "OK",
+      "skip": "Lewati",
+      "next": "Berikutnya",
+      "getStarted": "Mulai"
+    }
+  }
 }

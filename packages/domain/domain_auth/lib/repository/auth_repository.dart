@@ -1,4 +1,4 @@
 abstract class AuthRepository {
-  Future<void> setHasSeenOnboarding();
+  Future<bool> setHasSeenOnboarding();
   Future<bool> getHasSeenOnboarding();
 }

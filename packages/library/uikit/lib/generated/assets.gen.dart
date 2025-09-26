@@ -18,8 +18,25 @@ class $AssetsImagesGen {
   AssetGenImage get imgMuslimateLogo =>
       const AssetGenImage('assets/images/img_muslimate_logo.png');
 
+  /// File path: assets/images/img_onboarding_prayer_times.png
+  AssetGenImage get imgOnboardingPrayerTimes =>
+      const AssetGenImage('assets/images/img_onboarding_prayer_times.png');
+
+  /// File path: assets/images/img_onboarding_qibla.png
+  AssetGenImage get imgOnboardingQibla =>
+      const AssetGenImage('assets/images/img_onboarding_qibla.png');
+
+  /// File path: assets/images/img_onboarding_quran.png
+  AssetGenImage get imgOnboardingQuran =>
+      const AssetGenImage('assets/images/img_onboarding_quran.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [imgMuslimateLogo];
+  List<AssetGenImage> get values => [
+    imgMuslimateLogo,
+    imgOnboardingPrayerTimes,
+    imgOnboardingQibla,
+    imgOnboardingQuran,
+  ];
 }
 
 class $AssetsL10nGen {

@@ -17,5 +17,23 @@
     }
   },
   "cancel": "Cancel",
-  "ok": "OK"
+
+  "featureAuth": {
+    "title": {
+      "onboardingQuran": "Read the Qur’an",
+      "onboardingPrayer": "Prayer Times",
+      "onboardingQibla": "Qibla Direction"
+    },
+    "text": {
+      "onboardingQuranDesc": "Access the full Qur’an with translation and tafsir.",
+      "onboardingPrayerDesc": "Get reminders and accurate prayer times based on your location.",
+      "onboardingQiblaDesc": "Find the Qibla accurately wherever you are."
+    },
+    "button": {
+      "ok": "OK",
+      "skip": "Skip",
+      "next": "Next",
+      "getStarted": "Get Started"
+    }
+  }
 }
