@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:muslimate_mobile_app/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -8,10 +11,29 @@ import 'package:uikit/uikit.dart';
 import 'injector.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await configureDependencies();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  /// Not all errors are caught by Flutter.
+  /// Sometimes, errors are instead caught by Zones.
+  runZonedGuarded<Future<void>>(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
+
+      /// Initial Dependency Injection.
+      await configureDependencies();
+
+      /// Initial Firebase Service.
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
+
+      /// Pass all uncaught errors from the framework to Crashlytics.
+      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+
+      runApp(const MyApp());
+    },
+    (error, stack) {
+      FirebaseCrashlytics.instance.recordError(error, stack);
+    },
+  );
 }
 
 class MyApp extends StatefulWidget {
