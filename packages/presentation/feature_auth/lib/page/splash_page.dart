@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:feature_auth/bloc/splash/splash_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +12,6 @@ class SplashPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.white,
       body: BlocListener<SplashBloc, SplashState>(
         listener: (BuildContext context, SplashState state) {
           if (state is SplashDoneState) {
@@ -25,15 +23,10 @@ class SplashPage extends StatelessWidget {
           }
         },
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AppAssets.images.imgMuslimateLogo.image(
-                width: size.width * 0.40,
-                height: size.width * 0.40,
-                fit: BoxFit.contain,
-              ),
-            ],
+          child: AppAssets.images.imgMuslimateLogo.image(
+            width: size.width * 0.40,
+            height: size.width * 0.40,
+            fit: BoxFit.contain,
           ),
         ),
       ),

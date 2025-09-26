@@ -7,9 +7,6 @@ import 'dart:ui' as ui;
 import 'package:uikit/uikit.dart';
 import 'injector.dart';
 
-// simpan globalContext di luar agar bisa diakses via extension
-late BuildContext globalContext;
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
@@ -39,10 +36,6 @@ class _MyAppState extends State<MyApp> {
       title: 'Muslimate',
       locale: _locale,
       routerConfig: router,
-      builder: (context, child) {
-        globalContext = context; // simpan untuk akses di extension
-        return child!;
-      },
       theme: ThemeData(
         useMaterial3: true,
         textTheme: typographyTheme,

@@ -72,15 +72,16 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       return AnimatedSwitcher(
                         duration: const Duration(milliseconds: 500),
                         transitionBuilder: (child, animation) {
-                          final offsetAnimation = Tween<Offset>(
-                            begin: const Offset(0, 0.2),
-                            end: Offset.zero,
-                          ).animate(
-                            CurvedAnimation(
-                              parent: animation,
-                              curve: Curves.easeOutCubic,
-                            ),
-                          );
+                          final offsetAnimation =
+                              Tween<Offset>(
+                                begin: const Offset(0, 0.2),
+                                end: Offset.zero,
+                              ).animate(
+                                CurvedAnimation(
+                                  parent: animation,
+                                  curve: Curves.easeOutCubic,
+                                ),
+                              );
 
                           return FadeTransition(
                             opacity: animation,
@@ -102,11 +103,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
                 // DOT INDICATOR
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
+                  ),
                   child: Row(
                     children: List.generate(
                       pages.length,
-                          (index) => AnimatedContainer(
+                      (index) => AnimatedContainer(
                         duration: const Duration(milliseconds: 300),
                         margin: const EdgeInsets.only(right: 8),
                         width: _currentPage == index ? 24 : 8,
@@ -114,7 +118,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         decoration: BoxDecoration(
                           color: _currentPage == index
                               ? context.colorScheme.primary
-                              : context.colorScheme.onSurface.withOpacity(0.3),
+                              : context.colorScheme.onSurface.withValues(
+                                  alpha: 0.3,
+                                ),
                           borderRadius: BorderRadius.circular(4),
                         ),
                       ),
@@ -131,9 +137,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       if (_currentPage < pages.length - 1)
                         TextButton(
                           onPressed: () {
-                            context
-                                .read<OnboardingBloc>()
-                                .add(const OnboardingEvent.skip());
+                            context.read<OnboardingBloc>().add(
+                              const OnboardingEvent.skip(),
+                            );
                           },
                           child: Text(context.l10n.skip),
                         )
@@ -179,8 +185,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 
-  Widget _buildPage(BuildContext context,
-      {required Key key, required _OnboardingContent content}) {
+  Widget _buildPage(
+    BuildContext context, {
+    required Key key,
+    required _OnboardingContent content,
+  }) {
     return Container(
       key: key,
       padding: const EdgeInsets.all(24.0),
