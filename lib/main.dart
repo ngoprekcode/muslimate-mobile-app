@@ -6,6 +6,9 @@ import 'package:uikit/uikit.dart';
 
 import 'injector.dart';
 
+// simpan globalContext di luar agar bisa diakses via extension
+late BuildContext globalContext;
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
@@ -34,6 +37,10 @@ class _MyAppState extends State<MyApp> {
       title: 'Muslimate',
       locale: _locale,
       routerConfig: router,
+      builder: (context, child) {
+        globalContext = context; // simpan untuk akses di extension
+        return child!;
+      },
       theme: ThemeData(
         useMaterial3: true,
         textTheme: typographyTheme,
@@ -67,7 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // Ambil bahasa sistem asli sekali saja
     systemLanguage = ui.PlatformDispatcher.instance.locale.languageCode;
     selectedLanguage = systemLanguage;
   }
@@ -87,7 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
     widget.onLocaleChange(Locale(newLang));
 
-    // hanya tampilkan alert jika beda dengan bahasa sistem
     if (newLang != systemLanguage) {
       _showLanguageAlert(newLang);
     }

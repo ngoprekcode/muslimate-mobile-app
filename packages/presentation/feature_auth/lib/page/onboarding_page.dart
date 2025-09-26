@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uikit/generated/assets.gen.dart';
-import 'package:uikit/l10n/app_localizations.dart';
 import 'package:uikit/theme/theme_extension.dart';
+import 'package:uikit/l10n/l10n_context.dart';
 import '../bloc/onboarding/onboarding_bloc.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -19,28 +19,26 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
-
     final pages = [
       _OnboardingContent(
-        title: l10n.onboardingQuranTitle,
-        description: l10n.onboardingQuranDesc,
+        title: context.l10n.onboardingQuranTitle,
+        description: context.l10n.onboardingQuranDesc,
         image: AppAssets.images.imgOnboardingQuran.image(
           fit: BoxFit.contain,
           height: MediaQuery.of(context).size.height * 0.35,
         ),
       ),
       _OnboardingContent(
-        title: l10n.onboardingPrayerTitle,
-        description: l10n.onboardingPrayerDesc,
+        title: context.l10n.onboardingPrayerTitle,
+        description: context.l10n.onboardingPrayerDesc,
         image: AppAssets.images.imgOnboardingPrayerTimes.image(
           fit: BoxFit.contain,
           height: MediaQuery.of(context).size.height * 0.35,
         ),
       ),
       _OnboardingContent(
-        title: l10n.onboardingQiblaTitle,
-        description: l10n.onboardingQiblaDesc,
+        title: context.l10n.onboardingQiblaTitle,
+        description: context.l10n.onboardingQiblaDesc,
         image: AppAssets.images.imgOnboardingQibla.image(
           fit: BoxFit.contain,
           height: MediaQuery.of(context).size.height * 0.35,
@@ -75,7 +73,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         duration: const Duration(milliseconds: 500),
                         transitionBuilder: (child, animation) {
                           final offsetAnimation = Tween<Offset>(
-                            begin: const Offset(0, 0.2), // dari bawah
+                            begin: const Offset(0, 0.2),
                             end: Offset.zero,
                           ).animate(
                             CurvedAnimation(
@@ -137,10 +135,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 .read<OnboardingBloc>()
                                 .add(const OnboardingEvent.skip());
                           },
-                          child: Text(l10n.skip),
+                          child: Text(context.l10n.skip),
                         )
                       else
-                        const SizedBox(width: 68), // placeholder biar rata
+                        const SizedBox(width: 68), // biar rata
 
                       ElevatedButton(
                         onPressed: () {
@@ -166,8 +164,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         },
                         child: Text(
                           _currentPage == pages.length - 1
-                              ? l10n.getStarted
-                              : l10n.next,
+                              ? context.l10n.getStarted
+                              : context.l10n.next,
                         ),
                       ),
                     ],
