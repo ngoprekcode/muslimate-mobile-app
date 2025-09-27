@@ -1,18 +1,51 @@
+import 'dart:async';
+
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:muslimate_mobile_app/routes.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'dart:ui' as ui;
 
 import 'package:uikit/uikit.dart';
-
 import 'injector.dart';
 
-// simpan globalContext di luar agar bisa diakses via extension
-late BuildContext globalContext;
-
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await configureDependencies();
-  runApp(const MyApp());
+  /// Not all errors are caught by Flutter.
+  /// Sometimes, errors are instead caught by Zones.
+  runZonedGuarded<Future<void>>(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
+
+      /// Initial Dependency Injection.
+      await configureDependencies();
+
+      /// Initial Firebase Service.
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
+
+      /// Initial Firebase Analytics.
+      FirebaseAnalytics.instance;
+
+      /// Initial Firebase Remote Config.
+      final remoteConfig = FirebaseRemoteConfig.instance;
+      await remoteConfig.setConfigSettings(RemoteConfigSettings(
+        fetchTimeout: const Duration(minutes: 1),
+        minimumFetchInterval: const Duration(hours: 1),
+      ));
+
+      /// Pass all uncaught errors from the framework to Crashlytics.
+      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+
+      runApp(const MyApp());
+    },
+    (error, stack) {
+      FirebaseCrashlytics.instance.recordError(error, stack);
+    },
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -37,10 +70,6 @@ class _MyAppState extends State<MyApp> {
       title: 'Muslimate',
       locale: _locale,
       routerConfig: router,
-      builder: (context, child) {
-        globalContext = context; // simpan untuk akses di extension
-        return child!;
-      },
       theme: ThemeData(
         useMaterial3: true,
         textTheme: typographyTheme,

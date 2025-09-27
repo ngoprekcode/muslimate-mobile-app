@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "154261225149",
+    "project_id": "muslimate-app-6ae3f",
+    "storage_bucket": "muslimate-app-6ae3f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154261225149:android:4be4f2ba1214bb0b3f01d4",
+        "android_client_info": {
+          "package_name": "com.ngoprekcode.muslimate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1-380Jny6YRKYw9NhxacEwD2VZAs42aQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
