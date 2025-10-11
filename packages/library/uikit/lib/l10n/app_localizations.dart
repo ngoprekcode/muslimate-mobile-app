@@ -149,59 +149,65 @@ abstract class AppLocalizations {
   /// **'OK'**
   String get ok;
 
-  /// No description provided for @onboardingQuranTitle.
+  /// No description provided for @featureAuthTitleQuran.
   ///
   /// In en, this message translates to:
   /// **'Read the Qur’an'**
-  String get onboardingQuranTitle;
+  String get featureAuthTitleQuran;
 
-  /// No description provided for @onboardingQuranDesc.
-  ///
-  /// In en, this message translates to:
-  /// **'Access the full Qur’an with translation and tafsir.'**
-  String get onboardingQuranDesc;
-
-  /// No description provided for @onboardingPrayerTitle.
+  /// No description provided for @featureAuthTitlePrayer.
   ///
   /// In en, this message translates to:
   /// **'Prayer Times'**
-  String get onboardingPrayerTitle;
+  String get featureAuthTitlePrayer;
 
-  /// No description provided for @onboardingPrayerDesc.
-  ///
-  /// In en, this message translates to:
-  /// **'Get reminders and accurate prayer times based on your location.'**
-  String get onboardingPrayerDesc;
-
-  /// No description provided for @onboardingQiblaTitle.
+  /// No description provided for @featureAuthTitleQibla.
   ///
   /// In en, this message translates to:
   /// **'Qibla Direction'**
-  String get onboardingQiblaTitle;
+  String get featureAuthTitleQibla;
 
-  /// No description provided for @onboardingQiblaDesc.
+  /// No description provided for @featureAuthTextQuranDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Access the full Qur’an with translation and tafsir.'**
+  String get featureAuthTextQuranDesc;
+
+  /// No description provided for @featureAuthTextPrayerDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Get reminders and accurate prayer times based on your location.'**
+  String get featureAuthTextPrayerDesc;
+
+  /// No description provided for @featureAuthTextQiblaDesc.
   ///
   /// In en, this message translates to:
   /// **'Find the Qibla accurately wherever you are.'**
-  String get onboardingQiblaDesc;
+  String get featureAuthTextQiblaDesc;
 
-  /// No description provided for @skip.
+  /// No description provided for @featureAuthButtonOk.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get featureAuthButtonOk;
+
+  /// No description provided for @featureAuthButtonSkip.
   ///
   /// In en, this message translates to:
   /// **'Skip'**
-  String get skip;
+  String get featureAuthButtonSkip;
 
-  /// No description provided for @next.
+  /// No description provided for @featureAuthButtonNext.
   ///
   /// In en, this message translates to:
   /// **'Next'**
-  String get next;
+  String get featureAuthButtonNext;
 
-  /// No description provided for @getStarted.
+  /// No description provided for @featureAuthButtonGetStarted.
   ///
   /// In en, this message translates to:
   /// **'Get Started'**
-  String get getStarted;
+  String get featureAuthButtonGetStarted;
 }
 
 class _AppLocalizationsDelegate

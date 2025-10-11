@@ -17,6 +17,7 @@ workspace:
   - packages/presentation/feature_common
   - packages/presentation/feature_auth
   - packages/presentation/feature_home
+  - packages/presentation/feature_settings
   # Register shared library
   - packages/library/core
   - packages/library/uikit
@@ -41,6 +42,8 @@ dependencies:
     path: packages/presentation/feature_auth
   feature_home:
     path: packages/presentation/feature_home
+  feature_settings:
+    path: packages/presentation/feature_settings
   # Register shared library as a package
   core:
     path: packages/library/core
