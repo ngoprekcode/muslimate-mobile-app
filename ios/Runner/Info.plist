@@ -39,5 +39,13 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your location to determine the Qibla direction accurately.</string>
+
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>This allows us to get your location even when the app is in background for accurate Qibla direction.</string>
+
+    <key>NSMotionUsageDescription</key>
+    <string>We use your device sensors to calculate the Qibla direction.</string>
 </dict>
 </plist>

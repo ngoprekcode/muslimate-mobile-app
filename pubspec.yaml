@@ -18,6 +18,7 @@ workspace:
   - packages/presentation/feature_auth
   - packages/presentation/feature_home
   - packages/presentation/feature_settings
+  - packages/presentation/feature_qibla
   # Register shared library
   - packages/library/core
   - packages/library/uikit
@@ -44,6 +45,8 @@ dependencies:
     path: packages/presentation/feature_home
   feature_settings:
     path: packages/presentation/feature_settings
+  feature_qibla:
+    path: packages/presentation/feature_qibla
   # Register shared library as a package
   core:
     path: packages/library/core

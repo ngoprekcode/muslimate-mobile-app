@@ -30,5 +30,39 @@
   "featureAuthButtonOk": "OK",
   "featureAuthButtonSkip": "Lewati",
   "featureAuthButtonNext": "Berikutnya",
-  "featureAuthButtonGetStarted": "Mulai"
+  "featureAuthButtonGetStarted": "Mulai",
+
+    "featureQiblaAppBarTitle": "Kompas Kiblat",
+    "featureQiblaPermissionDenied": "Izin lokasi ditolak. Silakan aktifkan di pengaturan.",
+    "featureQiblaLoadingMessage": "Mengambil lokasi dan arah kompas...",
+    "featureQiblaPermissionDeniedShort": "Izin lokasi ditolak",
+    "featureQiblaRetry": "Coba Lagi",
+    "featureQiblaErrorPrefix": "Kesalahan:",
+    "featureQiblaPreparing": "Menyiapkan arah kiblat...",
+    "featureQiblaLocationUnknown": "Lokasi tidak diketahui",
+    "featureQiblaAngle": "Sudut Kiblat",
+    "featureQiblaLowAccuracyHint": "Tekan \"Kalibrasi\" jika akurasinya rendah",
+    "featureQiblaNoAccuracy": "Tidak ada akurasi",
+    "featureQiblaCalibrationNeeded": "Perlu kalibrasi",
+    "featureQiblaTips": "Tips: Letakkan perangkat di permukaan datar, jauhkan dari logam atau magnet. Untuk hasil lebih baik, gerakkan ponsel membentuk angka delapan.",
+    "featureQiblaDialogTitle": "Kalibrasi Kompas",
+    "featureQiblaDialogInstruction1": "Gerakkan ponsel membentuk angka delapan sampai akurasi membaik.",
+    "featureQiblaDialogInstruction2": "Letakkan perangkat di permukaan datar jika memungkinkan.",
+    "featureQiblaDialogClose": "Tutup",
+    "featureQiblaDialogDone": "Selesai, sudah dikalibrasi",
+    "featureQiblaCalibrationButton": "Kalibrasi",
+    "featureQiblaCompassNorth": "U",
+    "featureQiblaCompassQiblaLabel": "Kiblat",
+    "featureQiblaCompassQiblaText": "Kiblat: {angle}°",
+    "featureQiblaCompassHeadingText": "Arah: {heading}°",
+    "@featureQiblaCompassQiblaText": {
+      "placeholders": {
+        "angle": {"type": "num"}
+      }
+    },
+    "@featureQiblaCompassHeadingText": {
+      "placeholders": {
+        "heading": {"type": "double"}
+      }
+    }
 }

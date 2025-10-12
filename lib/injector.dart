@@ -3,6 +3,7 @@ import 'package:data_auth/di/di.dart';
 import 'package:domain_auth/di/di.dart';
 import 'package:feature_auth/di/di.dart';
 import 'package:feature_home/di/di.dart';
+import 'package:feature_qibla/di/di.dart';
 import 'package:feature_settings/di/di.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
@@ -24,5 +25,6 @@ Future<void> configureDependencies() async {
   configureFeatureAuthInjection();
   configureFeatureHomeInjection();
   configureFeatureSettingsInjection();
+  configureFeatureQiblaInjection();
   getIt.init();
 }
