@@ -38,32 +38,35 @@ class AppLocalizationsId extends AppLocalizations {
   String get ok => 'OK';
 
   @override
-  String get onboardingQuranTitle => 'Baca Al-Qur’an';
+  String get featureAuthTitleQuran => 'Baca Al-Qur’an';
 
   @override
-  String get onboardingQuranDesc =>
+  String get featureAuthTitlePrayer => 'Jadwal Sholat';
+
+  @override
+  String get featureAuthTitleQibla => 'Arah Kiblat';
+
+  @override
+  String get featureAuthTextQuranDesc =>
       'Dapatkan akses ke Al-Qur’an lengkap dengan terjemahan dan tafsir untuk menemani perjalanan spiritual Anda.';
 
   @override
-  String get onboardingPrayerTitle => 'Jadwal Sholat';
-
-  @override
-  String get onboardingPrayerDesc =>
+  String get featureAuthTextPrayerDesc =>
       'Jangan lewatkan shalat Anda! Dapatkan notifikasi pengingat dan jadwal shalat akurat sesuai lokasi Anda.';
 
   @override
-  String get onboardingQiblaTitle => 'Arah Kiblat';
-
-  @override
-  String get onboardingQiblaDesc =>
+  String get featureAuthTextQiblaDesc =>
       'Temukan arah kiblat dengan akurat di mana pun Anda berada, sehingga Anda bisa melaksanakan shalat dengan tenang.';
 
   @override
-  String get skip => 'Lewati';
+  String get featureAuthButtonOk => 'OK';
 
   @override
-  String get next => 'Berikutnya';
+  String get featureAuthButtonSkip => 'Lewati';
 
   @override
-  String get getStarted => 'Mulai';
+  String get featureAuthButtonNext => 'Berikutnya';
+
+  @override
+  String get featureAuthButtonGetStarted => 'Mulai';
 }

@@ -21,24 +21,24 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Widget build(BuildContext context) {
     final pages = [
       _OnboardingContent(
-        title: context.l10n.onboardingQuranTitle,
-        description: context.l10n.onboardingQuranDesc,
+        title: context.l10n.featureAuthTitleQuran,
+        description: context.l10n.featureAuthTextQuranDesc,
         image: AppAssets.images.imgOnboardingQuran.image(
           fit: BoxFit.contain,
           height: MediaQuery.of(context).size.height * 0.35,
         ),
       ),
       _OnboardingContent(
-        title: context.l10n.onboardingPrayerTitle,
-        description: context.l10n.onboardingPrayerDesc,
+        title: context.l10n.featureAuthTitlePrayer,
+        description: context.l10n.featureAuthTextPrayerDesc,
         image: AppAssets.images.imgOnboardingPrayerTimes.image(
           fit: BoxFit.contain,
           height: MediaQuery.of(context).size.height * 0.35,
         ),
       ),
       _OnboardingContent(
-        title: context.l10n.onboardingQiblaTitle,
-        description: context.l10n.onboardingQiblaDesc,
+        title: context.l10n.featureAuthTitleQibla,
+        description: context.l10n.featureAuthTextQiblaDesc,
         image: AppAssets.images.imgOnboardingQibla.image(
           fit: BoxFit.contain,
           height: MediaQuery.of(context).size.height * 0.35,
@@ -141,7 +141,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               const OnboardingEvent.skip(),
                             );
                           },
-                          child: Text(context.l10n.skip),
+                          child: Text(context.l10n.featureAuthButtonSkip),
                         )
                       else
                         const SizedBox(width: 68), // biar rata
@@ -170,8 +170,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         },
                         child: Text(
                           _currentPage == pages.length - 1
-                              ? context.l10n.getStarted
-                              : context.l10n.next,
+                              ? context.l10n.featureAuthButtonGetStarted
+                              : context.l10n.featureAuthButtonNext,
                         ),
                       ),
                     ],
