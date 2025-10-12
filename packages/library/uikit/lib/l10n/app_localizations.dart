@@ -208,6 +208,144 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Get Started'**
   String get featureAuthButtonGetStarted;
+
+  /// No description provided for @featureQiblaAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Qibla Compass'**
+  String get featureQiblaAppBarTitle;
+
+  /// No description provided for @featureQiblaPermissionDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Location permission denied. Please enable it in settings.'**
+  String get featureQiblaPermissionDenied;
+
+  /// No description provided for @featureQiblaLoadingMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Getting location & compass...'**
+  String get featureQiblaLoadingMessage;
+
+  /// No description provided for @featureQiblaPermissionDeniedShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Location permission denied'**
+  String get featureQiblaPermissionDeniedShort;
+
+  /// No description provided for @featureQiblaRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get featureQiblaRetry;
+
+  /// No description provided for @featureQiblaErrorPrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'Error:'**
+  String get featureQiblaErrorPrefix;
+
+  /// No description provided for @featureQiblaPreparing.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing Qibla...'**
+  String get featureQiblaPreparing;
+
+  /// No description provided for @featureQiblaLocationUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Location unknown'**
+  String get featureQiblaLocationUnknown;
+
+  /// No description provided for @featureQiblaAngle.
+  ///
+  /// In en, this message translates to:
+  /// **'Qibla angle'**
+  String get featureQiblaAngle;
+
+  /// No description provided for @featureQiblaLowAccuracyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap \"Calibrate\" if accuracy is low'**
+  String get featureQiblaLowAccuracyHint;
+
+  /// No description provided for @featureQiblaNoAccuracy.
+  ///
+  /// In en, this message translates to:
+  /// **'No acc'**
+  String get featureQiblaNoAccuracy;
+
+  /// No description provided for @featureQiblaCalibrationNeeded.
+  ///
+  /// In en, this message translates to:
+  /// **'Calibration needed'**
+  String get featureQiblaCalibrationNeeded;
+
+  /// No description provided for @featureQiblaTips.
+  ///
+  /// In en, this message translates to:
+  /// **'Tips: Place the device on a flat surface, keep away from metal objects, and avoid cases with magnets. For better results, move the phone in a figure-eight motion to calibrate.'**
+  String get featureQiblaTips;
+
+  /// No description provided for @featureQiblaDialogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Calibrate Compass'**
+  String get featureQiblaDialogTitle;
+
+  /// No description provided for @featureQiblaDialogInstruction1.
+  ///
+  /// In en, this message translates to:
+  /// **'Move your phone in a figure-eight motion until accuracy improves.'**
+  String get featureQiblaDialogInstruction1;
+
+  /// No description provided for @featureQiblaDialogInstruction2.
+  ///
+  /// In en, this message translates to:
+  /// **'Place the device on a flat surface if available.'**
+  String get featureQiblaDialogInstruction2;
+
+  /// No description provided for @featureQiblaDialogClose.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get featureQiblaDialogClose;
+
+  /// No description provided for @featureQiblaDialogDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Done, calibration completed'**
+  String get featureQiblaDialogDone;
+
+  /// No description provided for @featureQiblaCalibrationButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Calibrate'**
+  String get featureQiblaCalibrationButton;
+
+  /// No description provided for @featureQiblaCompassNorth.
+  ///
+  /// In en, this message translates to:
+  /// **'N'**
+  String get featureQiblaCompassNorth;
+
+  /// No description provided for @featureQiblaCompassQiblaLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Qibla'**
+  String get featureQiblaCompassQiblaLabel;
+
+  /// No description provided for @featureQiblaCompassQiblaText.
+  ///
+  /// In en, this message translates to:
+  /// **'Qibla: {angle}°'**
+  String featureQiblaCompassQiblaText({required num angle});
+
+  /// No description provided for @featureQiblaCompassHeadingText.
+  ///
+  /// In en, this message translates to:
+  /// **'Heading: {heading}°'**
+  String featureQiblaCompassHeadingText({required double heading});
 }
 
 class _AppLocalizationsDelegate

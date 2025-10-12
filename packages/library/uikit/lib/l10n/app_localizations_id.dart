@@ -69,4 +69,83 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get featureAuthButtonGetStarted => 'Mulai';
+
+  @override
+  String get featureQiblaAppBarTitle => 'Kompas Kiblat';
+
+  @override
+  String get featureQiblaPermissionDenied =>
+      'Izin lokasi ditolak. Silakan aktifkan di pengaturan.';
+
+  @override
+  String get featureQiblaLoadingMessage =>
+      'Mengambil lokasi dan arah kompas...';
+
+  @override
+  String get featureQiblaPermissionDeniedShort => 'Izin lokasi ditolak';
+
+  @override
+  String get featureQiblaRetry => 'Coba Lagi';
+
+  @override
+  String get featureQiblaErrorPrefix => 'Kesalahan:';
+
+  @override
+  String get featureQiblaPreparing => 'Menyiapkan arah kiblat...';
+
+  @override
+  String get featureQiblaLocationUnknown => 'Lokasi tidak diketahui';
+
+  @override
+  String get featureQiblaAngle => 'Sudut Kiblat';
+
+  @override
+  String get featureQiblaLowAccuracyHint =>
+      'Tekan \"Kalibrasi\" jika akurasinya rendah';
+
+  @override
+  String get featureQiblaNoAccuracy => 'Tidak ada akurasi';
+
+  @override
+  String get featureQiblaCalibrationNeeded => 'Perlu kalibrasi';
+
+  @override
+  String get featureQiblaTips =>
+      'Tips: Letakkan perangkat di permukaan datar, jauhkan dari logam atau magnet. Untuk hasil lebih baik, gerakkan ponsel membentuk angka delapan.';
+
+  @override
+  String get featureQiblaDialogTitle => 'Kalibrasi Kompas';
+
+  @override
+  String get featureQiblaDialogInstruction1 =>
+      'Gerakkan ponsel membentuk angka delapan sampai akurasi membaik.';
+
+  @override
+  String get featureQiblaDialogInstruction2 =>
+      'Letakkan perangkat di permukaan datar jika memungkinkan.';
+
+  @override
+  String get featureQiblaDialogClose => 'Tutup';
+
+  @override
+  String get featureQiblaDialogDone => 'Selesai, sudah dikalibrasi';
+
+  @override
+  String get featureQiblaCalibrationButton => 'Kalibrasi';
+
+  @override
+  String get featureQiblaCompassNorth => 'U';
+
+  @override
+  String get featureQiblaCompassQiblaLabel => 'Kiblat';
+
+  @override
+  String featureQiblaCompassQiblaText({required num angle}) {
+    return 'Kiblat: $angle°';
+  }
+
+  @override
+  String featureQiblaCompassHeadingText({required double heading}) {
+    return 'Arah: $heading°';
+  }
 }

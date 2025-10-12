@@ -69,4 +69,82 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get featureAuthButtonGetStarted => 'Get Started';
+
+  @override
+  String get featureQiblaAppBarTitle => 'Qibla Compass';
+
+  @override
+  String get featureQiblaPermissionDenied =>
+      'Location permission denied. Please enable it in settings.';
+
+  @override
+  String get featureQiblaLoadingMessage => 'Getting location & compass...';
+
+  @override
+  String get featureQiblaPermissionDeniedShort => 'Location permission denied';
+
+  @override
+  String get featureQiblaRetry => 'Retry';
+
+  @override
+  String get featureQiblaErrorPrefix => 'Error:';
+
+  @override
+  String get featureQiblaPreparing => 'Preparing Qibla...';
+
+  @override
+  String get featureQiblaLocationUnknown => 'Location unknown';
+
+  @override
+  String get featureQiblaAngle => 'Qibla angle';
+
+  @override
+  String get featureQiblaLowAccuracyHint =>
+      'Tap \"Calibrate\" if accuracy is low';
+
+  @override
+  String get featureQiblaNoAccuracy => 'No acc';
+
+  @override
+  String get featureQiblaCalibrationNeeded => 'Calibration needed';
+
+  @override
+  String get featureQiblaTips =>
+      'Tips: Place the device on a flat surface, keep away from metal objects, and avoid cases with magnets. For better results, move the phone in a figure-eight motion to calibrate.';
+
+  @override
+  String get featureQiblaDialogTitle => 'Calibrate Compass';
+
+  @override
+  String get featureQiblaDialogInstruction1 =>
+      'Move your phone in a figure-eight motion until accuracy improves.';
+
+  @override
+  String get featureQiblaDialogInstruction2 =>
+      'Place the device on a flat surface if available.';
+
+  @override
+  String get featureQiblaDialogClose => 'Close';
+
+  @override
+  String get featureQiblaDialogDone => 'Done, calibration completed';
+
+  @override
+  String get featureQiblaCalibrationButton => 'Calibrate';
+
+  @override
+  String get featureQiblaCompassNorth => 'N';
+
+  @override
+  String get featureQiblaCompassQiblaLabel => 'Qibla';
+
+  @override
+  String featureQiblaCompassQiblaText({required num angle}) {
+    return 'Qibla: $angle°';
+  }
+
+  @override
+  String featureQiblaCompassHeadingText({required double heading}) {
+    return 'Heading: $heading°';
+  }
 }

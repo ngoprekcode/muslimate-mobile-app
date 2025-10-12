@@ -30,5 +30,40 @@
   "featureAuthButtonOk": "OK",
   "featureAuthButtonSkip": "Skip",
   "featureAuthButtonNext": "Next",
-  "featureAuthButtonGetStarted": "Get Started"
+  "featureAuthButtonGetStarted": "Get Started",
+
+
+    "featureQiblaAppBarTitle": "Qibla Compass",
+    "featureQiblaPermissionDenied": "Location permission denied. Please enable it in settings.",
+    "featureQiblaLoadingMessage": "Getting location & compass...",
+    "featureQiblaPermissionDeniedShort": "Location permission denied",
+    "featureQiblaRetry": "Retry",
+    "featureQiblaErrorPrefix": "Error:",
+    "featureQiblaPreparing": "Preparing Qibla...",
+    "featureQiblaLocationUnknown": "Location unknown",
+    "featureQiblaAngle": "Qibla angle",
+    "featureQiblaLowAccuracyHint": "Tap \"Calibrate\" if accuracy is low",
+    "featureQiblaNoAccuracy": "No acc",
+    "featureQiblaCalibrationNeeded": "Calibration needed",
+    "featureQiblaTips": "Tips: Place the device on a flat surface, keep away from metal objects, and avoid cases with magnets. For better results, move the phone in a figure-eight motion to calibrate.",
+    "featureQiblaDialogTitle": "Calibrate Compass",
+    "featureQiblaDialogInstruction1": "Move your phone in a figure-eight motion until accuracy improves.",
+    "featureQiblaDialogInstruction2": "Place the device on a flat surface if available.",
+    "featureQiblaDialogClose": "Close",
+    "featureQiblaDialogDone": "Done, calibration completed",
+    "featureQiblaCalibrationButton": "Calibrate",
+    "featureQiblaCompassNorth": "N",
+    "featureQiblaCompassQiblaLabel": "Qibla",
+    "featureQiblaCompassQiblaText": "Qibla: {angle}°",
+    "featureQiblaCompassHeadingText": "Heading: {heading}°",
+    "@featureQiblaCompassQiblaText": {
+      "placeholders": {
+        "angle": {"type": "num"}
+      }
+    },
+    "@featureQiblaCompassHeadingText": {
+      "placeholders": {
+        "heading": {"type": "double"}
+      }
+    }
 }
