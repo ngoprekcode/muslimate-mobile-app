@@ -5,5 +5,6 @@ class SplashState with _$SplashState {
   const factory SplashState.idle() = SplashIdleState;
   const factory SplashState.loading() = SplashLoadingState;
   const factory SplashState.done({required bool hasSeenOnboarding}) =
-      SplashDoneState;
+  SplashDoneState;
+  const factory SplashState.maintenanceActive() = SplashMaintenanceState;
 }

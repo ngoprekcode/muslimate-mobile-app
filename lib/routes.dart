@@ -5,6 +5,6 @@ import 'package:feature_qibla/routes/qibla_routes.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: '/qibla',
+  initialLocation: '/',
   routes: [...featureAuthRoutes, ...featureHomeRoutes,...featureSettingsRoutes, ...featureQiblaRoutes],
 );
