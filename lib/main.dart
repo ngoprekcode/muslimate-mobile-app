@@ -28,29 +28,22 @@ Future<void> main() async {
 
       final remoteConfig = FirebaseRemoteConfig.instance;
 
-      await remoteConfig.setConfigSettings(RemoteConfigSettings(
-        fetchTimeout: const Duration(seconds: 10),
-        minimumFetchInterval: kDebugMode ? Duration.zero : const Duration(hours: 1),
-      ));
+      if (kDebugMode) {
+        await remoteConfig.setConfigSettings(RemoteConfigSettings(
+          fetchTimeout: const Duration(seconds: 10),
+          minimumFetchInterval: Duration.zero,
+        ));
+      } else {
+        await remoteConfig.setConfigSettings(RemoteConfigSettings(
+          fetchTimeout: const Duration(minutes: 1),
+          minimumFetchInterval: Duration(hours: 1),
+        ));;
+      }
 
       try {
         await remoteConfig.ensureInitialized();
       } catch (e) {
         if (kDebugMode) debugPrint('RemoteConfig ensureInitialized failed: $e');
-      }
-
-      if (kDebugMode) {
-        try {
-          final activated = await remoteConfig.fetchAndActivate();
-          debugPrint('RemoteConfig fetchAndActivate (debug): $activated');
-          debugPrint('RemoteConfig lastFetchStatus: ${remoteConfig.lastFetchStatus}');
-          debugPrint('RemoteConfig lastFetchTime: ${remoteConfig.lastFetchTime}');
-          debugPrint('RemoteConfig is_maintenance_mode_active: ${remoteConfig.getBool('is_maintenance_mode_active')}');
-        } catch (e) {
-          debugPrint('RemoteConfig fetchAndActivate (debug) error: $e');
-        }
-      } else {
-        unawaited(remoteConfig.fetchAndActivate().catchError((_) {}));
       }
 
       final getIt = GetIt.instance;
