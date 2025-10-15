@@ -26,6 +26,11 @@ workspace:
 dependencies:
   flutter:
     sdk: flutter
+  # Register shared library as a package
+  core:
+    path: packages/library/core
+  uikit:
+    path: packages/library/uikit
   # Register data layer as a package
   data_common:
     path: packages/data/data_common
@@ -47,11 +52,6 @@ dependencies:
     path: packages/presentation/feature_settings
   feature_qibla:
     path: packages/presentation/feature_qibla
-  # Register shared library as a package
-  core:
-    path: packages/library/core
-  uikit:
-    path: packages/library/uikit
 
   # Another library (third party)
   cupertino_icons: ^1.0.8
@@ -82,7 +82,7 @@ melos:
       run: cd packages/library/uikit && dart run build_runner build
       description: Running flutter_gen in uikit package.
     build:
-      run: melos exec "dart run build_runner build -d"
+      run: melos exec -c 1 --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
       description: Generate runner based on selected module
       packageFilters:
         flutter: true
