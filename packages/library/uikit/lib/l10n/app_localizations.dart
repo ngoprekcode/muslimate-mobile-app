@@ -346,6 +346,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Heading: {heading}°'**
   String featureQiblaCompassHeadingText({required double heading});
+
+  /// No description provided for @featureMaintenanceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Under Maintenance'**
+  String get featureMaintenanceTitle;
+
+  /// No description provided for @featureMaintenanceMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Our service is temporarily down for maintenance. We are working to bring things back as soon as possible. Thank you for your patience.'**
+  String get featureMaintenanceMessage;
+
+  /// No description provided for @featureMaintenanceAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Check Status'**
+  String get featureMaintenanceAction;
+
+  /// No description provided for @featureMaintenanceUnableToOpen.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to open status page'**
+  String get featureMaintenanceUnableToOpen;
+
+  /// No description provided for @featureMaintenanceAppreciation.
+  ///
+  /// In en, this message translates to:
+  /// **'We appreciate your patience.'**
+  String get featureMaintenanceAppreciation;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsTitle;
+
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settingsLanguage;
+
+  /// No description provided for @languageIndonesian.
+  ///
+  /// In en, this message translates to:
+  /// **'Bahasa Indonesia'**
+  String get languageIndonesian;
+
+  /// No description provided for @languageEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get languageEnglish;
+
+  /// No description provided for @settingsChangeLanguageSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Change app language'**
+  String get settingsChangeLanguageSubtitle;
+
+  /// No description provided for @settingsAppInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'App Information'**
+  String get settingsAppInformation;
+
+  /// No description provided for @settingsVersionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get settingsVersionLabel;
+
+  /// No description provided for @settingsVersionDefault.
+  ///
+  /// In en, this message translates to:
+  /// **'v1.0.0'**
+  String get settingsVersionDefault;
+
+  /// No description provided for @settingsFeedbackSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback & Support'**
+  String get settingsFeedbackSupport;
+
+  /// No description provided for @settingsSendFeedbackTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Feedback'**
+  String get settingsSendFeedbackTitle;
+
+  /// No description provided for @settingsSendFeedbackSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Report bugs or send suggestions'**
+  String get settingsSendFeedbackSubtitle;
+
+  /// No description provided for @settingsContactDeveloperTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Developer'**
+  String get settingsContactDeveloperTitle;
+
+  /// No description provided for @settingsContactDeveloperSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Email / Instagram / Website'**
+  String get settingsContactDeveloperSubtitle;
+
+  /// No description provided for @settingsFooterThanks.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you for using our app'**
+  String get settingsFooterThanks;
 }
 
 class _AppLocalizationsDelegate

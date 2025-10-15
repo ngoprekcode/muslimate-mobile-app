@@ -1,5 +1,3 @@
-// packages/data/data_auth/lib/data_source/auth_remote_data_source.dart
-
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:injectable/injectable.dart';
 
@@ -41,7 +39,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         }
       }
 
-      return remoteConfig.getBool('is_maintenance_mode_active');
+      return remoteConfig.getBool('is_maintenance_mode');
     } catch (e) {
       // Log error as needed, default to false.
       // ignore: avoid_print

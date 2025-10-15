@@ -1,46 +1,39 @@
-// lib/presentation/pages/maintenance_page.dart
 import 'package:flutter/material.dart';
+import 'package:uikit/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MaintenancePage extends StatelessWidget {
-  final String title;
-  final String message;
   final String? statusUrl;
-  final String? actionLabel;
 
   const MaintenancePage({
     Key? key,
-    this.title = 'Under Maintenance',
-    this.message =
-    'Our service is temporarily down for maintenance. We are working to bring things back as soon as possible. Thank you for your patience.',
     this.statusUrl,
-    this.actionLabel = 'Check Status',
   }) : super(key: key);
 
   Future<void> _openStatusUrl(BuildContext context) async {
+    final l10n = AppLocalizations.of(context)!;
     if (statusUrl == null) return;
     final uri = Uri.tryParse(statusUrl!);
     if (uri == null) return;
 
     try {
-      // launchUrl returns Future<bool> indicating success on most versions
       final launched = await launchUrl(uri, mode: LaunchMode.externalApplication);
       if (!launched) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Unable to open status page')),
+          SnackBar(content: Text(l10n.featureMaintenanceUnableToOpen)),
         );
       }
     } catch (e) {
-      // fallback: show snack
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Unable to open status page')),
+        SnackBar(content: Text(l10n.featureMaintenanceUnableToOpen)),
       );
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // prevent back navigation
+    final l10n = AppLocalizations.of(context)!;
+
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
@@ -53,7 +46,6 @@ class MaintenancePage extends StatelessWidget {
               final maxContentWidth = isWide ? 700.0 : width - 48.0;
               final iconSize = isWide ? 140.0 : 84.0;
 
-              // modern TextTheme properties (works with Material2 & Material3)
               final titleStyle = Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.w700,
               ) ??
@@ -77,12 +69,16 @@ class MaintenancePage extends StatelessWidget {
                         color: Theme.of(context).colorScheme.primary,
                       ),
                       const SizedBox(height: 20),
-                      Text(title, style: titleStyle, textAlign: TextAlign.center),
+                      Text(
+                        l10n.featureMaintenanceTitle,
+                        style: titleStyle,
+                        textAlign: TextAlign.center,
+                      ),
                       const SizedBox(height: 12),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          message,
+                          l10n.featureMaintenanceMessage,
                           textAlign: TextAlign.center,
                           style: bodyStyle,
                         ),
@@ -91,11 +87,11 @@ class MaintenancePage extends StatelessWidget {
                       if (statusUrl != null)
                         ElevatedButton(
                           onPressed: () => _openStatusUrl(context),
-                          child: Text(actionLabel ?? 'Check Status'),
+                          child: Text(l10n.featureMaintenanceAction),
                         ),
                       const SizedBox(height: 12),
                       Text(
-                        'We appreciate your patience.',
+                        l10n.featureMaintenanceAppreciation,
                         style: captionStyle,
                       ),
                     ],

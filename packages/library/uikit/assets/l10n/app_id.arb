@@ -64,5 +64,29 @@
       "placeholders": {
         "heading": {"type": "double"}
       }
-    }
+    },
+
+      "featureMaintenanceTitle": "Sedang Dalam Pemeliharaan",
+      "featureMaintenanceMessage": "Layanan kami sedang dalam pemeliharaan sementara. Kami sedang berusaha memulihkan layanan secepat mungkin. Terima kasih atas kesabaran Anda.",
+      "featureMaintenanceAction": "Periksa Status",
+      "featureMaintenanceUnableToOpen": "Tidak dapat membuka halaman status",
+      "featureMaintenanceAppreciation": "Kami menghargai kesabaran Anda.",
+
+        "settingsTitle": "Pengaturan",
+        "settingsLanguage": "Bahasa",
+        "languageIndonesian": "Bahasa Indonesia",
+        "languageEnglish": "English",
+        "settingsChangeLanguageSubtitle": "Ubah bahasa aplikasi",
+
+        "settingsAppInformation": "Informasi Aplikasi",
+        "settingsVersionLabel": "Versi",
+        "settingsVersionDefault": "v1.0.0",
+
+        "settingsFeedbackSupport": "Masukan & Dukungan",
+        "settingsSendFeedbackTitle": "Kirim Masukan",
+        "settingsSendFeedbackSubtitle": "Laporkan bug atau kirim saran",
+        "settingsContactDeveloperTitle": "Hubungi Pengembang",
+        "settingsContactDeveloperSubtitle": "Email / Instagram / Website",
+
+        "settingsFooterThanks": "Terima kasih telah menggunakan aplikasi kami"
 }

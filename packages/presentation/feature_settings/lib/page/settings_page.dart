@@ -22,7 +22,6 @@ class _SettingsView extends StatelessWidget {
   const _SettingsView();
 
   void _changeAppLocale(String localeCode) {
-    // Use global key to call setLocale on MyApp state
     final state = myAppKey.currentState;
     if (state != null) {
       state.setLocale(Locale(localeCode));
@@ -30,6 +29,7 @@ class _SettingsView extends StatelessWidget {
   }
 
   void _showLanguagePicker(BuildContext context, String currentLocale) {
+    final l = context.l10n;
     showModalBottomSheet(
       context: context,
       builder: (ctx) {
@@ -38,7 +38,7 @@ class _SettingsView extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               ListTile(
-                title: const Text('Bahasa Indonesia'),
+                title: Text(l.languageIndonesian),
                 trailing: currentLocale == 'id' ? const Icon(Icons.check) : null,
                 onTap: () {
                   context.read<SettingsBloc>().add(const SettingsEvent.changeLanguage('id'));
@@ -47,7 +47,7 @@ class _SettingsView extends StatelessWidget {
                 },
               ),
               ListTile(
-                title: const Text('English'),
+                title: Text(l.languageEnglish),
                 trailing: currentLocale == 'en' ? const Icon(Icons.check) : null,
                 onTap: () {
                   context.read<SettingsBloc>().add(const SettingsEvent.changeLanguage('en'));
@@ -65,14 +65,16 @@ class _SettingsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final padding = MediaQuery.of(context).size.width * 0.05;
+    final l = context.l10n;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.l10n.languageMismatchTitle.replaceAll('Language Mismatch', 'Settings')),
+        title: Text(l.settingsTitle),
       ),
       body: BlocBuilder<SettingsBloc, SettingsState>(
         builder: (context, state) {
           String currentLocale = ui.PlatformDispatcher.instance.locale.languageCode;
-          String version = 'v1.0.0';
+          String version = l.settingsVersionDefault; // fallback text if state not loaded
           if (state is SettingsLoaded) {
             currentLocale = state.locale;
             version = state.version;
@@ -84,27 +86,24 @@ class _SettingsView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Language
-                Text(
-                  'Language',
-                  style: context.textTheme.titleMedium,
-                ),
+                Text(l.settingsLanguage, style: context.textTheme.titleMedium),
                 const SizedBox(height: 8),
                 Card(
                   child: ListTile(
                     onTap: () => _showLanguagePicker(context, currentLocale),
-                    title: Text(currentLocale == 'id' ? 'Bahasa Indonesia' : 'English'),
-                    subtitle: Text('Change app language'),
+                    title: Text(currentLocale == 'id' ? l.languageIndonesian : l.languageEnglish),
+                    subtitle: Text(l.settingsChangeLanguageSubtitle),
                     trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                   ),
                 ),
                 const SizedBox(height: 24),
 
                 // App Info
-                Text('App Information', style: context.textTheme.titleMedium),
+                Text(l.settingsAppInformation, style: context.textTheme.titleMedium),
                 const SizedBox(height: 8),
                 Card(
                   child: ListTile(
-                    title: const Text('Version'),
+                    title: Text(l.settingsVersionLabel),
                     subtitle: Text(version),
                     leading: const Icon(Icons.info_outline),
                   ),
@@ -112,22 +111,22 @@ class _SettingsView extends StatelessWidget {
                 const SizedBox(height: 24),
 
                 // Feedback
-                Text('Feedback & Support', style: context.textTheme.titleMedium),
+                Text(l.settingsFeedbackSupport, style: context.textTheme.titleMedium),
                 const SizedBox(height: 8),
                 Card(
                   child: Column(
                     children: [
                       ListTile(
                         leading: const Icon(Icons.feedback_outlined),
-                        title: const Text('Send Feedback'),
-                        subtitle: const Text('Report bugs or send suggestions'),
+                        title: Text(l.settingsSendFeedbackTitle),
+                        subtitle: Text(l.settingsSendFeedbackSubtitle),
                         onTap: () => context.read<SettingsBloc>().add(const SettingsEvent.sendFeedback()),
                       ),
                       const Divider(height: 1),
                       ListTile(
                         leading: const Icon(Icons.mail_outline),
-                        title: const Text('Contact Developer'),
-                        subtitle: const Text('Email / Twitter / Website'),
+                        title: Text(l.settingsContactDeveloperTitle),
+                        subtitle: Text(l.settingsContactDeveloperSubtitle),
                         onTap: () => context.read<SettingsBloc>().add(const SettingsEvent.openContact('mailto:developer@example.com')),
                       ),
                     ],
@@ -138,7 +137,7 @@ class _SettingsView extends StatelessWidget {
                 // Footer: small text
                 Center(
                   child: Text(
-                    'Thank you for using our app',
+                    l.settingsFooterThanks,
                     style: context.textTheme.bodySmall,
                   ),
                 ),
