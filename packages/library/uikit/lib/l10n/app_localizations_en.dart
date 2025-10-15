@@ -147,4 +147,62 @@ class AppLocalizationsEn extends AppLocalizations {
   String featureQiblaCompassHeadingText({required double heading}) {
     return 'Heading: $heading°';
   }
+
+  @override
+  String get featureMaintenanceTitle => 'Under Maintenance';
+
+  @override
+  String get featureMaintenanceMessage =>
+      'Our service is temporarily down for maintenance. We are working to bring things back as soon as possible. Thank you for your patience.';
+
+  @override
+  String get featureMaintenanceAction => 'Check Status';
+
+  @override
+  String get featureMaintenanceUnableToOpen => 'Unable to open status page';
+
+  @override
+  String get featureMaintenanceAppreciation => 'We appreciate your patience.';
+
+  @override
+  String get settingsTitle => 'Settings';
+
+  @override
+  String get settingsLanguage => 'Language';
+
+  @override
+  String get languageIndonesian => 'Bahasa Indonesia';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get settingsChangeLanguageSubtitle => 'Change app language';
+
+  @override
+  String get settingsAppInformation => 'App Information';
+
+  @override
+  String get settingsVersionLabel => 'Version';
+
+  @override
+  String get settingsVersionDefault => 'v1.0.0';
+
+  @override
+  String get settingsFeedbackSupport => 'Feedback & Support';
+
+  @override
+  String get settingsSendFeedbackTitle => 'Send Feedback';
+
+  @override
+  String get settingsSendFeedbackSubtitle => 'Report bugs or send suggestions';
+
+  @override
+  String get settingsContactDeveloperTitle => 'Contact Developer';
+
+  @override
+  String get settingsContactDeveloperSubtitle => 'Email / Instagram / Website';
+
+  @override
+  String get settingsFooterThanks => 'Thank you for using our app';
 }

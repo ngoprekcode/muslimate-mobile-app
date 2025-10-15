@@ -14,6 +14,10 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       body: BlocListener<SplashBloc, SplashState>(
         listener: (BuildContext context, SplashState state) {
+          if (state is SplashMaintenanceState) {
+            context.replaceNamed('maintenance');
+            return;
+          }
           if (state is SplashDoneState) {
             if (state.hasSeenOnboarding) {
               context.replaceNamed('home');

@@ -148,4 +148,65 @@ class AppLocalizationsId extends AppLocalizations {
   String featureQiblaCompassHeadingText({required double heading}) {
     return 'Arah: $heading°';
   }
+
+  @override
+  String get featureMaintenanceTitle => 'Sedang Dalam Pemeliharaan';
+
+  @override
+  String get featureMaintenanceMessage =>
+      'Layanan kami sedang dalam pemeliharaan sementara. Kami sedang berusaha memulihkan layanan secepat mungkin. Terima kasih atas kesabaran Anda.';
+
+  @override
+  String get featureMaintenanceAction => 'Periksa Status';
+
+  @override
+  String get featureMaintenanceUnableToOpen =>
+      'Tidak dapat membuka halaman status';
+
+  @override
+  String get featureMaintenanceAppreciation =>
+      'Kami menghargai kesabaran Anda.';
+
+  @override
+  String get settingsTitle => 'Pengaturan';
+
+  @override
+  String get settingsLanguage => 'Bahasa';
+
+  @override
+  String get languageIndonesian => 'Bahasa Indonesia';
+
+  @override
+  String get languageEnglish => 'English';
+
+  @override
+  String get settingsChangeLanguageSubtitle => 'Ubah bahasa aplikasi';
+
+  @override
+  String get settingsAppInformation => 'Informasi Aplikasi';
+
+  @override
+  String get settingsVersionLabel => 'Versi';
+
+  @override
+  String get settingsVersionDefault => 'v1.0.0';
+
+  @override
+  String get settingsFeedbackSupport => 'Masukan & Dukungan';
+
+  @override
+  String get settingsSendFeedbackTitle => 'Kirim Masukan';
+
+  @override
+  String get settingsSendFeedbackSubtitle => 'Laporkan bug atau kirim saran';
+
+  @override
+  String get settingsContactDeveloperTitle => 'Hubungi Pengembang';
+
+  @override
+  String get settingsContactDeveloperSubtitle => 'Email / Instagram / Website';
+
+  @override
+  String get settingsFooterThanks =>
+      'Terima kasih telah menggunakan aplikasi kami';
 }
