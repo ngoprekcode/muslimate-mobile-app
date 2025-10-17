@@ -205,4 +205,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsFooterThanks => 'Thank you for using our app';
+
+  @override
+  String get updateHardTitle => 'Update Required';
+
+  @override
+  String get updateHardMessage =>
+      'Your app version is no longer supported. Please update to continue using the app.';
+
+  @override
+  String get updateSoftTitle => 'New Update Available';
+
+  @override
+  String get updateSoftMessage =>
+      'A newer version of the app is available. Would you like to update now?';
+
+  @override
+  String get updateNow => 'Update Now';
+
+  @override
+  String get later => 'Later';
 }

@@ -209,4 +209,24 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get settingsFooterThanks =>
       'Terima kasih telah menggunakan aplikasi kami';
+
+  @override
+  String get updateHardTitle => 'Perlu Pembaruan';
+
+  @override
+  String get updateHardMessage =>
+      'Versi aplikasi Anda sudah tidak didukung. Silakan lakukan pembaruan untuk melanjutkan.';
+
+  @override
+  String get updateSoftTitle => 'Pembaruan Tersedia';
+
+  @override
+  String get updateSoftMessage =>
+      'Versi baru aplikasi tersedia. Apakah Anda ingin memperbarui sekarang?';
+
+  @override
+  String get updateNow => 'Perbarui Sekarang';
+
+  @override
+  String get later => 'Nanti';
 }
