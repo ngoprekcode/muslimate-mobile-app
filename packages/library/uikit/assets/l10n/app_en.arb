@@ -67,27 +67,31 @@
       }
     },
 
-      "featureMaintenanceTitle": "Under Maintenance",
-      "featureMaintenanceMessage": "Our service is temporarily down for maintenance. We are working to bring things back as soon as possible. Thank you for your patience.",
-      "featureMaintenanceAction": "Check Status",
-      "featureMaintenanceUnableToOpen": "Unable to open status page",
-      "featureMaintenanceAppreciation": "We appreciate your patience.",
+  "featureMaintenanceTitle": "Under Maintenance",
+  "featureMaintenanceMessage": "Our service is temporarily down for maintenance. We are working to bring things back as soon as possible. Thank you for your patience.",
+  "featureMaintenanceAction": "Check Status",
+  "featureMaintenanceUnableToOpen": "Unable to open status page",
+  "featureMaintenanceAppreciation": "We appreciate your patience.",
 
-        "settingsTitle": "Settings",
-        "settingsLanguage": "Language",
-        "languageIndonesian": "Bahasa Indonesia",
-        "languageEnglish": "English",
-        "settingsChangeLanguageSubtitle": "Change app language",
+    "settingsTitle": "Settings",
+    "settingsLanguage": "Language",
+    "languageIndonesian": "Bahasa Indonesia",
+    "languageEnglish": "English",
+    "settingsChangeLanguageSubtitle": "Change app language",
+    "settingsAppInformation": "App Information",
+    "settingsVersionLabel": "Version",
+    "settingsVersionDefault": "v1.0.0",
+    "settingsFeedbackSupport": "Feedback & Support",
+    "settingsSendFeedbackTitle": "Send Feedback",
+    "settingsSendFeedbackSubtitle": "Report bugs or send suggestions",
+    "settingsContactDeveloperTitle": "Contact Developer",
+    "settingsContactDeveloperSubtitle": "Email / Instagram / Website",
+    "settingsFooterThanks": "Thank you for using our app",
 
-        "settingsAppInformation": "App Information",
-        "settingsVersionLabel": "Version",
-        "settingsVersionDefault": "v1.0.0",
-
-        "settingsFeedbackSupport": "Feedback & Support",
-        "settingsSendFeedbackTitle": "Send Feedback",
-        "settingsSendFeedbackSubtitle": "Report bugs or send suggestions",
-        "settingsContactDeveloperTitle": "Contact Developer",
-        "settingsContactDeveloperSubtitle": "Email / Instagram / Website",
-
-        "settingsFooterThanks": "Thank you for using our app"
+    "updateHardTitle": "Update Required",
+    "updateHardMessage": "Your app version is no longer supported. Please update to continue using the app.",
+    "updateSoftTitle": "New Update Available",
+    "updateSoftMessage": "A newer version of the app is available. Would you like to update now?",
+    "updateNow": "Update Now",
+    "later": "Later"
 }

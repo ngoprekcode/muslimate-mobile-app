@@ -88,5 +88,12 @@
         "settingsContactDeveloperTitle": "Hubungi Pengembang",
         "settingsContactDeveloperSubtitle": "Email / Instagram / Website",
 
-        "settingsFooterThanks": "Terima kasih telah menggunakan aplikasi kami"
+        "settingsFooterThanks": "Terima kasih telah menggunakan aplikasi kami",
+
+  "updateHardTitle": "Perlu Pembaruan",
+  "updateHardMessage": "Versi aplikasi Anda sudah tidak didukung. Silakan lakukan pembaruan untuk melanjutkan.",
+  "updateSoftTitle": "Pembaruan Tersedia",
+  "updateSoftMessage": "Versi baru aplikasi tersedia. Apakah Anda ingin memperbarui sekarang?",
+  "updateNow": "Perbarui Sekarang",
+  "later": "Nanti"
 }

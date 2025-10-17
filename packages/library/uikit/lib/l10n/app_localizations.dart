@@ -460,6 +460,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Thank you for using our app'**
   String get settingsFooterThanks;
+
+  /// No description provided for @updateHardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Required'**
+  String get updateHardTitle;
+
+  /// No description provided for @updateHardMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your app version is no longer supported. Please update to continue using the app.'**
+  String get updateHardMessage;
+
+  /// No description provided for @updateSoftTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New Update Available'**
+  String get updateSoftTitle;
+
+  /// No description provided for @updateSoftMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'A newer version of the app is available. Would you like to update now?'**
+  String get updateSoftMessage;
+
+  /// No description provided for @updateNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Now'**
+  String get updateNow;
+
+  /// No description provided for @later.
+  ///
+  /// In en, this message translates to:
+  /// **'Later'**
+  String get later;
 }
 
 class _AppLocalizationsDelegate
